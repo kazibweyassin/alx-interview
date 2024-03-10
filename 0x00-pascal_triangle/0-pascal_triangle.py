@@ -16,6 +16,3 @@ def pascal_triangle(n):
         matrix.append(temp)
 
     return matrix
-
-# Test the function
-print(pascal_triangle(5))
