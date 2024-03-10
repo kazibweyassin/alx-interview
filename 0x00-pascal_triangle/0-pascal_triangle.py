@@ -1,16 +1,29 @@
 #!/usr/bin/python3
+"""
+pascal_triangle
+"""
+
+
 def pascal_triangle(n):
-    
-    matrix = []
-    
+    """
+    generate a series of arrays representing
+    rows of pascal's triangle up to level n
+    """
     if n <= 0:
-        return matrix
-    matrix = [[1]] 
-    
-    for i in range(1, n):
-        temp = [1]
-        for j in range(len(matrix[i - 1]) - 1):
-            temp.append(matrix[i - 1][j] + matrix[i - 1][j + 1])
-        temp.append(1)
-        matrix.append(temp)
-    return matrix
+        return []
+    if n == 1:
+        return [[1]]
+
+    prev_tri = pascal_triangle(n - 1)
+    last_row = prev_tri[-1]
+
+    current_row = []
+    acc = 0
+    for x in last_row:
+        current_row.append(acc + x)
+        acc = x
+    current_row.append(1)
+
+    prev_tri.append(current_row)
+
+    return prev_tri
