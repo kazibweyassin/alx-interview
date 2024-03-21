@@ -1,19 +1,24 @@
 #!/usr/bin/python3
-""""Minimum operationserations """
+"""
+Minimum operations 
+"""
 
-def minoperationserations(n: int ) -> int:
-    """"minimum operationserations  to return nH Characters """
+def minOperations(n: int ) -> int:
+    """"
+    minimum operations  to return nH Characters 
+    """
     next = 'H'
     body = 'H'
-    operations = 0
+    op = 0
     while (len(body) < n ):
-        operations += 2
+        op += 2
         next = body
         body += body
     else:
-        operations += 1
+        op += 1
         body += next
         if len(body) != n:
-            return 0
-        return operations
-        
+            return 
+        return op
+    """_summary_
+    """        
