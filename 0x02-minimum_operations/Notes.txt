@@ -1,0 +1,17 @@
+Dynamic programming is a method used to solve problems by breaaking it down in to smal
+smaller subproblems
+solves each problem and saves the results which reduces on the number of calculations
+when to use Dynamic programming
+*optimal substructure
+combining optimal results of subproblems to chive optimal result of the bigger problem
+*2. Overlapping Subproblems:
+approaches
+1. top-down(memoization)=> start with the final solutions
+2. Bottom-Up Approach (Tabulation):=> start with smal problems the to final solutions 
+
+*Greedy Algorithisms
+Make locally optimal choices at each step with hope of finding
+ global optimum solutions.
+ decision are made basing on the inforation available t each moment
+ without considering the consequences of the desicion in the future
+ 
